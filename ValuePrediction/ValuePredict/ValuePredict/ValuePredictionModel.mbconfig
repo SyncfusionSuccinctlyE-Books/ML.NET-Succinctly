@@ -1,0 +1,665 @@
+﻿{
+  "Scenario": "Regression",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "C:\\PERSONAL-DATA\\Projects\\Books\\ML.NET Succinctly\\ML.NET\\housing.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "CRIM",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 3
+      },
+      {
+        "ColumnName": "ZN",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 3
+      },
+      {
+        "ColumnName": "INDUS",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 3
+      },
+      {
+        "ColumnName": "CHAS",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 3
+      },
+      {
+        "ColumnName": "NOX",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 3
+      },
+      {
+        "ColumnName": "RM",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 3
+      },
+      {
+        "ColumnName": "AGE",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 3
+      },
+      {
+        "ColumnName": "DIS",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 3
+      },
+      {
+        "ColumnName": "RAD",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 3
+      },
+      {
+        "ColumnName": "TAX",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 3
+      },
+      {
+        "ColumnName": "PTRATIO",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 3
+      },
+      {
+        "ColumnName": "B",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 3
+      },
+      {
+        "ColumnName": "LSAT",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 3
+      },
+      {
+        "ColumnName": "MEDV",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 3
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 2,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.82502103590137943,
+        "RuntimeInSeconds": 0.553,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e4",
+          "e0": {
+            "OutputColumnNames": [
+              "CRIM",
+              "ZN",
+              "INDUS",
+              "CHAS",
+              "NOX",
+              "RM",
+              "AGE",
+              "DIS",
+              "RAD",
+              "TAX",
+              "PTRATIO",
+              "B",
+              "LSAT"
+            ],
+            "InputColumnNames": [
+              "CRIM",
+              "ZN",
+              "INDUS",
+              "CHAS",
+              "NOX",
+              "RM",
+              "AGE",
+              "DIS",
+              "RAD",
+              "TAX",
+              "PTRATIO",
+              "B",
+              "LSAT"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "CRIM",
+              "ZN",
+              "INDUS",
+              "CHAS",
+              "NOX",
+              "RM",
+              "AGE",
+              "DIS",
+              "RAD",
+              "TAX",
+              "PTRATIO",
+              "B",
+              "LSAT"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.59953169634925574,
+            "NumberOfTrees": 2632,
+            "SubsampleFraction": 0.99999977667298645,
+            "MaximumBinCountPerFeature": 246,
+            "FeatureFraction": 0.87843420277591744,
+            "L1Regularization": 2.9119463606483562E-10,
+            "L2Regularization": 0.99999977667298645,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e2": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsPoissonRegressionRegression",
+        "Score": 0.79822731396436164,
+        "RuntimeInSeconds": 0.143,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "CRIM",
+              "ZN",
+              "INDUS",
+              "CHAS",
+              "NOX",
+              "RM",
+              "AGE",
+              "DIS",
+              "RAD",
+              "TAX",
+              "PTRATIO",
+              "B",
+              "LSAT"
+            ],
+            "InputColumnNames": [
+              "CRIM",
+              "ZN",
+              "INDUS",
+              "CHAS",
+              "NOX",
+              "RM",
+              "AGE",
+              "DIS",
+              "RAD",
+              "TAX",
+              "PTRATIO",
+              "B",
+              "LSAT"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "CRIM",
+              "ZN",
+              "INDUS",
+              "CHAS",
+              "NOX",
+              "RM",
+              "AGE",
+              "DIS",
+              "RAD",
+              "TAX",
+              "PTRATIO",
+              "B",
+              "LSAT"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e2": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.76961943182991577,
+        "RuntimeInSeconds": 0.112,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e4",
+          "e0": {
+            "OutputColumnNames": [
+              "CRIM",
+              "ZN",
+              "INDUS",
+              "CHAS",
+              "NOX",
+              "RM",
+              "AGE",
+              "DIS",
+              "RAD",
+              "TAX",
+              "PTRATIO",
+              "B",
+              "LSAT"
+            ],
+            "InputColumnNames": [
+              "CRIM",
+              "ZN",
+              "INDUS",
+              "CHAS",
+              "NOX",
+              "RM",
+              "AGE",
+              "DIS",
+              "RAD",
+              "TAX",
+              "PTRATIO",
+              "B",
+              "LSAT"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "CRIM",
+              "ZN",
+              "INDUS",
+              "CHAS",
+              "NOX",
+              "RM",
+              "AGE",
+              "DIS",
+              "RAD",
+              "TAX",
+              "PTRATIO",
+              "B",
+              "LSAT"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 254,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e2": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.75446316901896893,
+        "RuntimeInSeconds": 1.507,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e4",
+          "e0": {
+            "OutputColumnNames": [
+              "CRIM",
+              "ZN",
+              "INDUS",
+              "CHAS",
+              "NOX",
+              "RM",
+              "AGE",
+              "DIS",
+              "RAD",
+              "TAX",
+              "PTRATIO",
+              "B",
+              "LSAT"
+            ],
+            "InputColumnNames": [
+              "CRIM",
+              "ZN",
+              "INDUS",
+              "CHAS",
+              "NOX",
+              "RM",
+              "AGE",
+              "DIS",
+              "RAD",
+              "TAX",
+              "PTRATIO",
+              "B",
+              "LSAT"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "CRIM",
+              "ZN",
+              "INDUS",
+              "CHAS",
+              "NOX",
+              "RM",
+              "AGE",
+              "DIS",
+              "RAD",
+              "TAX",
+              "PTRATIO",
+              "B",
+              "LSAT"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfLeaves": 3754,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.99999977667298645,
+            "NumberOfTrees": 5636,
+            "SubsampleFraction": 0.99999977667298645,
+            "MaximumBinCountPerFeature": 305,
+            "FeatureFraction": 0.92545847557677441,
+            "L1Regularization": 2.2139503888286752E-10,
+            "L2Regularization": 0.21090086395256921,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e2": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.74814605499161191,
+        "RuntimeInSeconds": 0.439,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e3",
+          "e0": {
+            "OutputColumnNames": [
+              "CRIM",
+              "ZN",
+              "INDUS",
+              "CHAS",
+              "NOX",
+              "RM",
+              "AGE",
+              "DIS",
+              "RAD",
+              "TAX",
+              "PTRATIO",
+              "B",
+              "LSAT"
+            ],
+            "InputColumnNames": [
+              "CRIM",
+              "ZN",
+              "INDUS",
+              "CHAS",
+              "NOX",
+              "RM",
+              "AGE",
+              "DIS",
+              "RAD",
+              "TAX",
+              "PTRATIO",
+              "B",
+              "LSAT"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "CRIM",
+              "ZN",
+              "INDUS",
+              "CHAS",
+              "NOX",
+              "RM",
+              "AGE",
+              "DIS",
+              "RAD",
+              "TAX",
+              "PTRATIO",
+              "B",
+              "LSAT"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e2": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "MEDV",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "ReplaceMissingValues",
+      "e1": "Concatenate",
+      "e2": "FastTreeRegression",
+      "e3": "FastForestRegression",
+      "e4": "LightGbmRegression",
+      "e5": "LbfgsPoissonRegressionRegression",
+      "e6": "SdcaRegression"
+    },
+    "Schema": "e0 * e1 * (e2 + e3 + e4 + e5 + e6)",
+    "MetricName": "RSquared"
+  },
+  "Type": "TrainingConfig",
+  "Version": 3,
+  "TrainingOption": {
+    "Version": 0,
+    "Type": "RegressionTrainingOption",
+    "TrainingTime": 10,
+    "LabelColumn": "MEDV",
+    "Seed": 0
+  }
+}
