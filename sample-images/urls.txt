@@ -1,0 +1,20 @@
+Dataset images:
+https://github.com/dotnet/samples/blob/main/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip
+
+https://pixabay.com/photos/broccoli-vegetable-food-healthy-498600/
+https://pixabay.com/photos/broccoli-vegetables-healthy-food-389890/
+https://pixabay.com/photos/bowl-of-broccoli-broccoli-fresh-2584307/
+
+https://pixabay.com/photos/pizza-italian-homemade-cheese-3007395/
+https://pixabay.com/photos/pizza-food-italian-cheese-1202775/
+
+https://pixabay.com/photos/mattress-bed-pillow-sleep-relax-2489615/
+
+https://pixabay.com/photos/toaster-toast-bread-food-2617854/
+https://pixabay.com/photos/toaster-pop-up-toaster-toast-slice-72745/
+
+Test images:
+https://pixabay.com/photos/kitchen-toaster-kettle-home-874805/
+https://pixabay.com/photos/girl-walking-teddy-bear-child-walk-447701/
+https://pixabay.com/photos/pizza-food-takeout-box-pepperoni-1702652/
+https://pixabay.com/photos/broccoli-brocoli-cauliflower-992710/
